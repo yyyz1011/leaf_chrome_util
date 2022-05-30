@@ -1,10 +1,12 @@
 <script lang="ts">
-  import { Tabs } from "attractions";
-  import { navTabsList, navTabs, NavTabsItem } from "@/constants/nav";
+  import { navTabs, NavTabsItem } from "@/constants/nav";
   import routes from "@/routes";
   import Router, { push } from "svelte-spa-router";
+  import { H2 } from "attractions";
 
-  let currentTab: string = navTabsList[0];
+  let currentTab: string = navTabs.find(
+    (item: NavTabsItem) => item.key === window.location.hash.slice(1)
+  )?.label;
 
   function navTabsChange() {
     const currentKey = navTabs.find(
@@ -15,12 +17,7 @@
 </script>
 
 <main>
-  <Tabs
-    name="menus"
-    items={navTabsList}
-    bind:value={currentTab}
-    on:change={navTabsChange}
-  />
+  <H2>LEAF-UTIL</H2>
   <Router {routes} />
 </main>
 

@@ -12,6 +12,7 @@
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^1.0.0-next.30",
     "@tsconfig/svelte": "^2.0.1",
+    "@types/qrcode": "^1.4.2",
     "attractions": "^3.7.0",
     "postcss": "^8.4.14",
     "rollup-plugin-copy": "^3.4.0",
@@ -24,6 +25,7 @@
     "vite": "^2.9.9"
   },
   "dependencies": {
+    "qrcode": "^1.5.0",
     "svelte-spa-router": "^3.2.0"
   }
 }
