@@ -11,14 +11,15 @@ export default {
       targets: [
         {
           src: "src/plugins/manifest.json",
-          dest: "./public/",
+          dest: "./public",
         },
         {
           src: "./src/plugins/logo.png",
-          dest: "./public/",
+          dest: "./public",
         },
       ],
       verbose: true,
+      copyOnce:true,
     }),
   ],
   base: "./",
